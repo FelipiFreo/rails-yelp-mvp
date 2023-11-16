@@ -4,3 +4,16 @@
   <%# <%= ⭐ * @restaurant.rating +1 %>
 
 </div>
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2>😱&hearts;<%= review.rating  %></h2>
+        <p><%= review.content %></p>
+      </div>
+    </div>
+  <% end %>
+</ul>
